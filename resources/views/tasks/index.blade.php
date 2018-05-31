@@ -14,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($tasks as $)
+                @foreach ($tasks as $task)
                     <tr>
                         <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
                         <td>{{ $task->status }}</td>
