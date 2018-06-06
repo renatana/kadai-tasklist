@@ -15,8 +15,7 @@
         <div class="col-xs-8">
             <ul class="nav nav-tabs nav-justified">
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_tasklists }}</span></a></li>
-                <li><a href="#">Followings</a></li>
-                <li><a href="#">Followers</a></li>
+  
             </ul>
             @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'tasklists.store']) !!}

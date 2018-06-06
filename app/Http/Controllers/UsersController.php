@@ -12,7 +12,7 @@ class UsersController extends Controller
     {
         $users = User::paginate(10);
 
-        return view('users.index', [
+        return view('tasks.index', [
             'users' => $users,
         ]);
     }
@@ -28,6 +28,6 @@ class UsersController extends Controller
 
         $data += $this->counts($user);
 
-        return view('users.show', $data);
+        return view('tasks.show', $data);
     }
 }
