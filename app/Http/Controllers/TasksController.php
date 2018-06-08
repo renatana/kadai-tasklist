@@ -40,40 +40,6 @@ public function show($id){
             }
     }
 
-//     public function show($id)
-//         {
-//           { $task = Task::find($id);
-     
-//         if (\Auth::check()){
-//                 if(!empty($task->id)){
-//                     if (null !== \Auth::user() && \Auth::user()->id == $task->user_id)
-       
-//              return view('tasks.show', [
-//                 'tasks' => $task,
-            
-//             ]);}else{
-//                 return view('welcome');
-//             }
-//         }else{return view('/');
-//             }
-//          }
-//  }
-
-    // public function show($id)
-    // {
-    //     if (\Auth::check()) {
-    //         $user = \Auth::user();
-    //     $task = Task::find($id);
-        
-    //     return view('tasks.show', [
-    //         'task' => $task,
-    //     ]);
-            
-    //     }else {
-    //         return view('welcome');
-    //     }
-    // }
-    
     public function edit($id){
         $task = Task::find($id);
             if (isset($task)){
@@ -88,42 +54,7 @@ public function show($id){
             }
     }
     
-    // public function edit($id)
-   
-    // {
-    //      { $task = Task::find($id);
-     
-    //     if (\Auth::check()){
-    //         // if (null !== \Auth::user() && \Auth::user()->id == $task->user_id && !empty($task->id)){
-    //                 if(!empty($task->id)){if (null !== \Auth::user() && \Auth::user()->id == $task->user_id)
-       
-    //     return view('tasks.edit', [
-    //         'tasks' => $task,
-            
-    //   ]);}else{
-    //             return view('welcome');
-    //         }
-    //     }else{return view('/');
-    //         }
-    //      }
-       
-    // }
-
-
-    // public function edit($id)
-    // {
-    //     if (\Auth::check()) {
-    //         $user = \Auth::user();
-    //         $task = Task::find($id);
-        
-    //     return view('tasks.edit',[
-    //         'task' => $task,
-    //         ]);
-            
-    //     }else {
-    //         return view('welcome');
-    //     }   
-    // }
+ 
 
     public function update(Request $request, $id)
     {
@@ -139,20 +70,6 @@ public function show($id){
 
         return redirect('/');
     }
-    
-    //     public function index($id){
-    //     $task = Task::find($id);
-    //         if (isset($task)){
-    //             if (null !== \Auth::user() && \Auth::user()->id == $task->user_id){
-    //                 return view('tasks.index', [ 'task' => $task,]);
-                    
-    //             }else{
-    //                 return view('welcome');
-    //             }
-    //         }else{
-    //           return view('welcome');
-    //         }
-    // } 
     
 
     
