@@ -152,7 +152,8 @@ public function show($id){
     //         }else{
     //           return view('welcome');
     //         }
-    // }
+    // } 
+    
 
     
     public function index()
