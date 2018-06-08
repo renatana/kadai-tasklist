@@ -14,7 +14,7 @@ class TasksController extends Controller
     public function create()
     {
         if (\Auth::check()) {
-            $user = \Auth::user();
+        $user = \Auth::user();
         $task = new Task;
         return view('tasks.create', [
             'task' => $task,
@@ -28,7 +28,7 @@ class TasksController extends Controller
 
 public function show($id){
         $task = Task::find($id);
-            if (isset($task)){
+            if (!empty($task->id)){
                 if (null !== \Auth::user() && \Auth::user()->id == $task->user_id){
                     return view('tasks.show', [ 'task' => $task,]);
                     
@@ -139,6 +139,20 @@ public function show($id){
 
         return redirect('/');
     }
+    
+    //     public function index($id){
+    //     $task = Task::find($id);
+    //         if (isset($task)){
+    //             if (null !== \Auth::user() && \Auth::user()->id == $task->user_id){
+    //                 return view('tasks.index', [ 'task' => $task,]);
+                    
+    //             }else{
+    //                 return view('welcome');
+    //             }
+    //         }else{
+    //           return view('welcome');
+    //         }
+    // }
 
     
     public function index()
@@ -149,11 +163,11 @@ public function show($id){
         
         return view('tasks.index',[
             'tasks'=>$tasks,
-            ]);
+                ]);   
         }else {
             return view('welcome');
         }
-    }
+    }  
     
     public function store(Request $request)
     {
