@@ -18,6 +18,7 @@ class CreateTasklistsTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->string('content');
             $table->timestamps();
+            
 
           
           
